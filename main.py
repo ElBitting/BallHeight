@@ -1,15 +1,16 @@
-g = 9.81
-v0 = float(input("What is the initial velocity "))
-t = float(input("What time do you want to check "))
+#ball throwing hieght calculator
+g = 9.81 #gravity
+v0 = float(input("What is the initial velocity ")) #input should be m/s
+t = float(input("What time do you want to check ")) #time is in seconds
 
-while t< 0:
+while t< 0: #if input doesnt make sense, redo
     print('Error, the time must be greater than zero.')
     t = float(input("What is the time you want to check "))
 
-y = v0 * t - g * t ** 2 / 2
+y = v0 * t - g * t ** 2 / 2 #calculate location
 
-if t > 2*v0/g or y == 0:
+if t > 2*v0/g or y == 0: #hasnt left at t=0 and lands at >
     print("That ball is on the ground")
-else:
+else: #normal location
     print('The ball is '+str(y)+' meters above the ground')
 
