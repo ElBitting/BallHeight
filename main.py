@@ -15,4 +15,4 @@ y = v0 * t - g * t**2 / 2  # calculate location
 if t > 2*v0/g or y == 0:  # hasn't left at t=0 and lands at >
     print("The ball is on the ground")
 else:  # normal location
-    print('The ball is '+str(y)+' meters above the ground')
+    print('The ball is', y, 'meters above the ground')
